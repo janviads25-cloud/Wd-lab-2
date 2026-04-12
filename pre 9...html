@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Cars Page</title>
+
+<!-- Font -->
+<link href="https://fonts.googleapis.com/css2?family=Arial&display=swap" rel="stylesheet">
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+
+body{
+    font-family: Arial;
+    margin: 0;
+}
+
+/* header */
+header{
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* nav */
+nav{
+    background: #555;
+    text-align: center;
+}
+nav a{
+    color: white;
+    padding: 10px;
+    display: inline-block;
+    text-decoration: none;
+}
+nav a:hover{
+    background: black;
+}
+
+/* columns */
+.text{
+    column-count: 2;
+    padding: 15px;
+}
+
+/* cards */
+.box{
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+}
+.card{
+    background: lightgray;
+    padding: 10px;
+    flex: 1;
+    text-align: center;
+    transition: 0.3s;
+}
+.card:hover{
+    transform: scale(1.05);
+}
+
+/* animation */
+header{
+    animation: top 1s;
+}
+@keyframes top{
+    from{opacity:0;}
+    to{opacity:1;}
+}
+
+/* responsive */
+@media(max-width:600px){
+    .text{
+        column-count: 1;
+    }
+    .box{
+        flex-direction: column;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <h2><i class="fa fa-car"></i> Cars</h2>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Models</a>
+    <a href="#">Contact</a>
+</nav>
+
+<div class="text">
+    <p>Cars are important for transport. There are many types like sports cars, SUVs and electric cars.</p>
+    <p>Modern cars have better safety and technology. Electric cars help reduce pollution.</p>
+</div>
+
+<div class="box">
+    <div class="card">
+        <i class="fa fa-tachometer-alt"></i>
+        <h4>Speed</h4>
+    </div>
+
+    <div class="card">
+        <i class="fa fa-shield"></i>
+        <h4>Safety</h4>
+    </div>
+</div>
+
+</body>
+</html>
